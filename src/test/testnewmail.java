@@ -5,6 +5,7 @@ import comwx.WXDoToken;
 import comwx.WXDoUser;
 import net.sf.json.JSONObject;
 import newmail.DoGroup;
+import newmail.DoLogin;
 import newmail.DoParty;
 import newmail.DoToken;
 import newmail.DoUser;
@@ -15,9 +16,12 @@ public class testnewmail {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String token=WXDoToken.gettoken("wx33aab90c288c4bab", "F111ETPsMjh4AvJP25FTXryWPvxoiQgLKqjWbzHFcTuCRTSgQmrv7Gn0g43H_Qa-");
-JSONObject user=WXDoUser.getuser("tl02507", token);
-System.out.println(user.toString());
+		//String token=WXDoToken.gettoken("wx33aab90c288c4bab", "F111ETPsMjh4AvJP25FTXryWPvxoiQgLKqjWbzHFcTuCRTSgQmrv7Gn0g43H_Qa-");
+		String token=DoToken.gettoken("wm714ea8cd6bcdb5b1", "03-_DX_NFprMvIXcdbA8IWQ247f_-qVDtnjWLQPw4oiQktWvE3nmBU9A6XtCnxha");
+		JSONObject loginrs=DoLogin.getloginurl(token, "weida@txmail.xyz");
+		System.out.println(loginrs.getString("login_url"));
+//JSONObject user=WXDoUser.getuser("tl02507", token);
+//System.out.println(user.toString());
 		//		JSONObject user=new JSONObject();
 //		JSONObject extattr=new JSONObject();
 //		JSONArray attrs=new JSONArray();

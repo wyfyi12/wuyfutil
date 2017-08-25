@@ -39,7 +39,7 @@ public class DoUser {
 		String url="https://api.exmail.qq.com/cgi-bin/user/get?access_token="+token+"&userid="+userid;
 		HttpsUtil.getconnbyget(url);
 		rs=HttpsUtil.getrsbyget();
-		System.out.println("get user "+userid+" rs:"+DoJson.getJSONObjectfromString(rs).getString("errmsg"));
+		//System.out.println("get user "+userid+" rs:"+DoJson.getJSONObjectfromString(rs).getString("errmsg"));
 		userinfo=JSONObject.fromObject(rs);
 		return userinfo;
 	}

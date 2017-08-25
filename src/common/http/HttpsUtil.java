@@ -95,7 +95,6 @@ public class HttpsUtil {
         out.write(data);
         out.flush();
         out.close();
-        System.out.println(data.toString());
         // 取得输入流，并使用Reader读取  
         in = new BufferedReader(new InputStreamReader(huconn.getInputStream(), "UTF-8"));
         String line;
