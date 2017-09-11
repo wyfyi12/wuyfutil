@@ -12,22 +12,22 @@ public class testoldmail {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		JSONObject token=OldDoToken.gettoken("njarti","58c53c39efe605834e2cd7baf1d77c43");
+		JSONObject token=OldDoToken.gettoken("sdshunjing","82cd01b53405b4ceb1cd73fab1fcefb");
 		System.out.println(token.toString());
 //		HashMap<String, String> user=new HashMap<>();
 //		user.put("Alias", "test1@yzsmarts.xyz");
 //		user.put("Password", "Nantu123");
 //		user.put("Action", "3");
-		HashMap<String, String> tokent=new HashMap<>();
-		tokent.put("Authorization", "Bearer "+token.getString("access_token"));
+//		HashMap<String, String> tokent=new HashMap<>();
+//		tokent.put("Authorization", "Bearer "+token.getString("access_token"));
 //		String userinfo=OldDoUser.moduser(user,tokent);
 //		System.out.println(userinfo);
-		HashMap<String, String> alias=new HashMap<>();
-		alias.put("Alias", "test1@yzsmarts.xyz");
-		String rs=OldLogin.getauthkey(alias, tokent);
-		System.out.println(rs);
-		alias.put("Agent", "njarti");
-		String url=OldLogin.getlogin(alias, DoJson.getJSONObjectfromString(rs).getString("auth_key"));
-		System.out.println(url);
+//		HashMap<String, String> alias=new HashMap<>();
+//		alias.put("Alias", "test1@yzsmarts.xyz");
+//		String rs=OldLogin.getauthkey(alias, tokent);
+//		System.out.println(rs);
+//		alias.put("Agent", "njarti");
+//		String url=OldLogin.getlogin(alias, DoJson.getJSONObjectfromString(rs).getString("auth_key"));
+//		System.out.println(url);
 	}
 }

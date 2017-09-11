@@ -8,14 +8,14 @@ import newmail.DoToken;
 
 public class testnewdropoff {
 	public static void main(String[] args) {
-		String token =DoToken.gettoken("wmff3b20d80406cb2e", "Cdsm_D7RlLXsvL5U9ixZUgM-if5ARtJY323GFcCJrBr-_rNO141vispbp-RKyM_S");
+		String token =DoToken.gettoken("wm714ea8cd6bcdb5b1", "xwSMBSC5kVUzQFzs3CP5OO-kXvvRF-uByr4uhSw6v2s");
 		while(true){
 		delallparty(token);
 		}
 	}
 	
 	public static void delallparty(String token){
-		JSONObject rsjob=DoParty.getpartylist(token, "0");
+		JSONObject rsjob=DoParty.getpartylist(token, "4681602092521118201");
 		JSONArray partyja=DoJson.getJSONArrayfromJSONObject(rsjob.toString(), "department");
 		if(partyja.size()>1){
 			JSONObject party=partyja.getJSONObject(1);

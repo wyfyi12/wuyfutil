@@ -11,7 +11,6 @@ public class DoParty {
 			String url="https://api.exmail.qq.com/cgi-bin/department/create?access_token="+token;
 			HttpsUtil.getconnbypost(url);
 			rs=HttpsUtil.getrsbypost(partyjob.toString());
-			System.out.println("add"+partyjob.getString("name")+",rs:"+rs);
 		}catch(Exception e){
 			e.printStackTrace();
 		}
@@ -66,7 +65,6 @@ public class DoParty {
 			String url="https://api.exmail.qq.com/cgi-bin/department/search?access_token="+token;
 			HttpsUtil.getconnbypost(url);
 			rs=HttpsUtil.getrsbypost(partyjob.toString());
-			System.out.println("search"+partyjob.getString("name")+",rs:"+rs);
 		}catch(Exception e){
 			e.printStackTrace();
 		}

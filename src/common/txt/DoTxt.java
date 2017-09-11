@@ -30,7 +30,7 @@ public class DoTxt {
 				RandomAccessFile randomFile = new RandomAccessFile(name, "rw");
 				long fileLength = randomFile.length();
 				randomFile.seek(fileLength);
-				randomFile.writeBytes(content+"\r\n");
+				randomFile.write((content+"\r\n").getBytes());
 				randomFile.close();
 				System.out.println("write content " + content + " to file " + name + " rs:success!");
 			} else {
